@@ -1,0 +1,9 @@
+Q1. x = 0x4c000000
+
+Q2. x = 0x4b800000
+
+Q3. 0x4c000000
+    0x4c000000
+    1.0
+
+Q4. Floating points do not obey the associative rule.

@@ -1,0 +1,105 @@
+Problem 1
+
+2.19)
+	1)0xBABEFEF8
+	2)0xAAAAAAA0
+	3)0x00005545
+
+2.20) 
+	srl $t0, $t0, 11
+	sll $t0, $t0, 26
+	ori $t2, $0, 0x03ff
+	sll $t2, $t2, 16
+	ori $t2, $t2, 0xffff
+	and $t1, $t1, $t2
+	or $t1, $t1, $t0
+
+2.22)
+	lw $t3, 0($s1)
+	sll $t1, $t3, 4
+
+2.23)
+	$t2 = 3
+
+2.26)
+	1) 20
+	2) i = 10;
+	   do {
+		B += 2;
+		i = i - 1;
+	   } while (i > 0)
+	3) 5*N
+
+2.27)
+	addi $t0, $0, 0
+	beq $0, $0, TEST1
+LOOP1: 	addi $t1, $0, 0
+	beq $0, $0, TEST2
+LOOP2: 	add $t3, $t0, $t1
+	sll $t2, $t1, 4
+	add $t2, $t2, $s2
+	sw $t3, ($t2)
+	addi $t1, $t1, 1 
+TEST2: 	slt $t2, $t1, $s1
+	bne $t2, $0, LOOP2
+	addi $t0, $t0, 1 
+TEST1: 	slt $t2, $t0, $s0
+	bne $t2, $0, LOOP1
+
+2.28)
+	14 instructions to implement the code.
+	158 instructions are executed.
+
+2.29) 
+	for (i = 0; i < 100; i++) {
+		result += MemArray[s0];
+		s0 = s0 + 4;
+	}
+
+2.30)
+	addi $t1, $s0, 400
+LOOP:	lw $s1, 0($t1)
+	add $s2, $s2, $s1
+	addi $t1, $t1, -4
+	bne $t1, $s0, LOOP
+
+
+Problem 2
+
+	addi $t1 $zero 31  	//initialize $t1 to 31
+	addi $t0 $zero 31	//initialize $t0 to 31
+loop:	srlv $t3 $a0 $t1	//right shift a0 by $t1 and store in $t3
+	andi $t3 $t3 1		//restore LSB of $t3
+	addi $t3 $t3 48  	//add 48 to $t3
+	sub $t4 $t0 $t1  	//subtract $t0 by $t1 and store in $t4
+	add $t2 $a1 $t4  	//add $t4 to $a1 and store in $t2
+	sb $t3 0($t2)  		//store $t3 to $t2[0]
+	beq $t1 $zero done  	//if($t1==0) goto done
+	addi $t1 $t1 -1  	//add -1 to $t1
+	j loop 			//goto loop
+done:	sb $zero 1($t2)  	//store 0 at $t2[1]
+	jr $ra
+
+
+	t1 = 31;
+	t0 = 31;
+	t3 = a0 >> t1;
+	t3 = t3&1;
+	t3 += 48;
+	t4 = t0 - t1;
+	t2 = &largeArray[t4];
+	t2[0] = t3;
+	if(t1 == 0) {
+		goto done;
+	}
+	t1 += -1;
+	goto loop;
+	t2[1] = 0;
+
+
+
+
+
+
+
+

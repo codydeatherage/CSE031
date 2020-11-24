@@ -1,0 +1,75 @@
+Line 1:	C1. Stack memory is affected.
+	C2. No memory is allocated or freed.
+	C3. C2 is not true.
+	C4. The statement does not result in a memory leak.
+
+Line 2: C1. Stack memory.
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 3:	C1. Stack memory
+	C2. No
+	C3. Not true.
+	C4. No
+
+Line 4:	C1. Stack memory.
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 5:	C1. Stack memory
+	C2. No
+	C3. C2 is not true.
+	C4. No
+
+Line 6:	C1. Stack memory
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 7:	C1. Stack memory
+	C2. No
+	C3. Not true.
+	C4. No
+
+Line 8.	C1. Stack memory
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 9:	C1. Stack memory
+	C2. No
+	C3. Not true.
+	C4. No
+
+Line 10:C1. Heap memory
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 11:C1. Heap
+	C2. Yes
+	C3. In *ptr
+	C4. No
+
+Line 12:C1. Heap
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 13:C1. Heap
+	C2. No
+	C3. Not true
+	C4. No
+
+Line 14:C1. Heap
+	C2. No
+	C3. Not true
+	C4. Yes
+
+Line 15:C1. Heap
+	C2. Yes
+	C3. In **handle
+	C4. No
+

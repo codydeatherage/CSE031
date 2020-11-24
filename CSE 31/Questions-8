@@ -1,0 +1,27 @@
+Q1. -1 has two characters, '-' and '1' while 1 only has one, '1'.
+
+Q2. Addition
+
+Q3.
+	if (a0 != 0) {
+		sp = sp - 8;
+		sp[4] = ra;
+		a0 = a0 - 1;
+	}
+	if (a0 != 0) {
+		sp[0] = v0;
+	}
+	if (a0 != 0) {
+		sp[0] = t0;
+		v0 = v0 + t0;
+		v0 = v0 + 1;
+		a0 = a0 + 1;
+		sp[4] = ra;
+		sp = sp + 8;
+	}
+	printf(v0)
+		
+
+Q4. 8
+
+Q5. 33

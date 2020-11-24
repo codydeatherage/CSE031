@@ -1,0 +1,3 @@
+Q1. A programmer might not notice this if the stack is valid.
+
+Q2. You can guarantee the crash by making the regions of the stack invalid by setting the local variable zero.
